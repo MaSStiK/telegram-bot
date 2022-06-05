@@ -20,13 +20,14 @@ const startGame = (chatId) => {
 const start = () => {
     bot.setMyCommands([
         {command: "/start", description: "Начало"},
-        {command: "/indo", description: "Информация"},
+        {command: "/info", description: "Информация"},
         {command: "/game", description: "Игра"},
     ])
     
     bot.on("message", msg => {
         const text = msg.text
         const chatId = msg.chat.id
+        console.log(msg)
         if (text === "/start") {
             bot.sendSticker(chatId, "https://tlgrm.ru/_/stickers/ccd/a8d/ccda8d5d-d492-4393-8bb7-e33f77c24907/1.webp")
             return bot.sendMessage(chatId, `Добро пожаловать, ${msg.from.first_name} ${msg.from.last_name}`)
