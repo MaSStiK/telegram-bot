@@ -7,7 +7,7 @@ function randomInteger(min, max) {
     return Math.floor(rand);
 }
 
-const token = "5541619642:AAHzpW44KUZwex5F11QvbjZo4YR8we2_rq0"
+const token = "token"
 const bot = new TelegramApi(token, {polling: true})
 const chats = {}
 
